@@ -6,8 +6,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node .",
-    "dev": "nodemon . & npm run scss", 
-    "scss": "sass --watch src/scss/main.scss public/styles/main.css" 
+    "dev": "nodemon . & npm run scss",
+    "scss": "sass --watch src/scss/main.scss public/styles/main.css",
+    "cypress:open": "cypress open",
+    "server": "node src/server.js",
+    "ci": "start-server-and-test server http://localhost:3000 cypress:run"
   },
   "keywords": [],
   "author": "",
@@ -18,6 +21,7 @@
     "sass": "^1.54.0"
   },
   "devDependencies": {
+    "cypress": "^10.3.1",
     "nodemon": "^2.0.19"
   }
 }
